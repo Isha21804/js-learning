@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     //task 1
+     let arr=[5,6];
+      arr.push(7);
+      arr.unshift(4);
+      console.log(arr); 
+
+     //task 2
+     function getElememt(array, position){
+       return array[position-1] 
+    }
+     let array=[1,2,3,5,7,9,4,0,8];
+      console.log(getElememt(array,4));
+
+     //task 3
+      function arrCopy(x){
+        return x.slice(0,x.length)
+      }
+     let x=[1,2,3,4,5,6];
+     let y= arrCopy(x);
+     y[0]= null;
+     console.log(x);
+     console.log(y);
+     
+     //task 4
+     function isPrime(num){
+      for(let i=2; i<num; i++) {
+       if( num % i === 0){
+         return false;
+       }
+      }
+        return true;
+     }
+     let num =2;
+     let i =0;
+    while(true){
+        if(isPrime(num)){
+         console.log(num);
+          i++;
+          if(i>=5){
+            break;
+          }
+        }
+        num++
+    }
+
+    //task 5
+    for(i = 10; i > 0; i--){
+      console.log(i);
+    }
+    // for(let i = 0; i < 10; i++){ second way 
+    //   console.log(10-i);  
+    // }
+
+    //task 6
+    let nums=[1,-6,5,7,-98];
+    for(let i = 0; i< nums.length; i++){
+      if(nums[i]< 0)
+        continue;
+      console.log(nums[i]);
+    }
+    
+    //task 7
+    let str=[`I'am`, 'Learning' ,'JavaScript'];
+    let result = '';
+    for(i = 0; i < str.length; i++){
+       result +=  str[i] + ' ';
+    }
+    console.log(result);
+    // console.log(str.join(" "));
+    </script> 
+</body>
+</html> 

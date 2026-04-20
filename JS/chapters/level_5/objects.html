@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     let product = {
+        company: 'Mango',
+       'item-name': 'T-shirt',
+        price:  800,
+     };
+// console.log(product);   
+   product.company= 'apple';  // changing objects properties
+   let propertyValue = 'item-name';
+   console.log(product['propertyValue']);
+
+   delete product['company']
+   console.log(product);
+    </script>
+</body>
+</html>

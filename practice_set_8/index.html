@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <script>
+        //task 1
+     let multiply = (num1, num2) => num1* num2;
+     console.log(multiply(4,5));
+
+       //task 2
+       let printGreeting = () => console.log('Hello Isha!');
+        let runTwice = inputFunction =>{
+            inputFunction();
+            inputFunction();
+        }
+        runTwice(printGreeting);
+
+      // task 4
+      let arr =[1,2,3,4,5,6,7,8,9];
+      let sum = 0;
+      arr.forEach(num => sum+= num);
+      console.log(sum);
+
+      let squares = arr.map( num=> num * num);
+      console.log(squares);
+        
+
+    </script>
+</body>
+</html>

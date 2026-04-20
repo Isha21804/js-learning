@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //  example_1
+     function generateRandomMove(){
+        let random = Math.random();
+        let randomNum = random *3;
+        return randomNum ;
+     }
+     console.log(generateRandomMove());
+     console.log(generateRandomMove());
+     console.log(generateRandomMove());
+     console.log(generateRandomMove());
+     console.log(generateRandomMove());
+     console.log(generateRandomMove());
+
+    //   example_2
+     function driverStatus(){
+        let age = 17;
+        let status;
+        if(age >= 18){
+         status ='You can Drive';
+        }
+        else {
+         status ='You cannot Drive';
+        }
+        return status;
+    }
+    console.log(driverStatus());
+
+    // example_3
+     function ageStatus(){
+      let age =20;
+      if (age=== undefined) {
+       return 'Invalid age';
+      }
+     console.log('Checking your age');
+
+     if(age > 18){
+     return 'You can vote';
+     }
+     else {
+     return 'You cannot vote' ;  
+     }
+     }
+     console.log(ageStatus());
+</script>
+</body>
+</html>

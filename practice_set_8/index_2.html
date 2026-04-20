@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .click-btn{
+            height: 25px;
+            width: 80px;
+            background-color: rgb(167, 112, 31);
+            border: none;
+            border-radius: 4px ;
+            color: white;
+            font-size: 15px;
+        }
+        .js-size{
+            height: 50px;
+            width: 160px;
+            font-size: 30px;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+  <button class="click-btn">Click me</button>
+
+
+    <script> 
+    // task 5
+     let  btnElement = document.querySelector
+     ('.click-btn');
+     btnElement.addEventListener('click', event =>
+          setTimeout(doubleSize, 2000));
+          function doubleSize() {
+          let  btnElement = document.querySelector('.click-btn');
+          btnElement.classList.add('js-size');
+        }
+    </script>
+</body>
+</html>

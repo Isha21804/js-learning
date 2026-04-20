@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     let product = {
+      company: 'mango',
+      item: 'T-shirt',
+      price: 400,
+     };
+    //  let company = product.company; // destructuring
+      let {company,price} = product; // same as
+      console.log(company);
+      console.log(price);
+
+      // method shorthand
+      let product2 ={
+        company: 'Apple',
+        item: 'Jeans',
+        price2: 500,
+        displayPrice(){
+            return `$${this.price2}`;
+        }
+      };
+      console.log(product2.price2);
+    </script>
+</body>
+</html>

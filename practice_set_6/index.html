@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #my-click{
+      height: 50px;
+      width: 50px;
+      font-size: 15px;
+      border: none;
+      border-radius: 4px;
+    }
+    .js-even{
+        background-color: rgb(173, 170, 127);
+    }
+    .js-odd{
+        background-color:rgb(175, 98, 175);
+    }
+</style>
+<body>
+    <h1 id="greet"></h1>
+    <button id="my-click" onclick="buttonPressed();"></button>
+    <script>
+
+     let numOfTimesClicked = localStorage.getItem
+     ('numOfTimesClicked')||0;
+     function buttonPressed(){
+       numOfTimesClicked ++;
+       localStorage.setItem('numOfTimesClicked', numOfTimesClicked);
+       updateButton();
+      }
+     function updateButton(){
+     let button = document.querySelector('#my-click');
+      if(numOfTimesClicked % 2===0){
+       button.classList.remove('js-odd');
+       button.classList.add('js-even');
+      }
+      else{  
+       button.classList.remove('js-even');
+       button.classList.add('js-odd');  
+      }
+      button.innerText= numOfTimesClicked;
+      }
+      updateButton();
+
+     function doGreeting(personName = 'Dear'){
+     let myDate = new Date();
+     let hours = myDate.getHours();
+  // let hours = 15;
+     let heading = document.querySelector('#greet')
+      console.log(hours);
+     if(hours >5 && hours <12){
+       heading.innerText =`Good Morning ${personName}`;
+      } 
+     else if(hours >12 && hours <18){
+       heading.innerText =`Good Morning ${personName}`;
+      }
+     else{
+      heading.innerText =`Good Night ${personName}`;
+      }
+     }
+     doGreeting('Isha');
+     localStorage.clear();
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=[2,3,4,5,8,7,9];
+       arr.forEach(num => {
+        if (num === 5) {
+            return;
+        }  
+        console.log(`Visited: ${num}`);
+        });
+     arr.forEach(num => console.log(num));
+
+        function search(arr, num){
+            for(let i =0; i < arr.length; i++){
+                if(arr[i] === num){
+                console.log(`Your element found at ${i}`);
+                return;
+                }
+            }
+            console.log('Element not found');
+        }
+        //   search(arr, 1);
+    </script>
+</body>
+</html>
